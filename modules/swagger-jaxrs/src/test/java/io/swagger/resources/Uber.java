@@ -1,4 +1,4 @@
-package io.swagger.servlet.resources;
+package io.swagger.resources;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
@@ -6,7 +6,6 @@ import io.swagger.annotations.AuthorizationScope;
 import io.swagger.annotations.Extension;
 import io.swagger.annotations.ExtensionProperty;
 import io.swagger.annotations.ResponseHeader;
-import io.swagger.servlet.models.SampleData;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -15,8 +14,8 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)
 @ApiOperation(
-        value = "Meta Uber Annotation",
-        notes = "Test description",
+        value = "Meta DataUber Description",
+        notes = "Test Uber Description",
         consumes = "multipart/form-data",
         produces = "multipart/form-data",
         httpMethod = "GET",
@@ -36,10 +35,11 @@ import java.lang.annotation.Target;
                 @ResponseHeader(
                         name = "operation_response_header1",
                         description = "operation_response_header_description1",
-                        response = SampleData.class),
+                        response = Class.class),
                 @ResponseHeader(
                         name = "operation_response_header2",
-                        description = "operation_response_header_description2"),
+                        description = "operation_response_header_description2",
+                        response = Class.class),
                 @ResponseHeader(
                         name = "operation_response_header3",
                         description = "operation_response_header_description3",

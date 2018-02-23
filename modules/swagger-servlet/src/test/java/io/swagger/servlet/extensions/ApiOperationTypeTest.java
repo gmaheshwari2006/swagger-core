@@ -10,11 +10,12 @@ import java.util.Collections;
 
 public class ApiOperationTypeTest {
 
+    private static final String USERS_PATH = "/users";
+
     @Test
     public void testApiOperationInType() {
-
         final Swagger swagger = new Swagger();
         Reader.read(swagger, Collections.<Class<?>>singleton(ApiOperationResource.class));
-        Assert.assertNotNull(swagger.getPaths().get("/users"));
+        Assert.assertNotNull(swagger.getPaths().get(USERS_PATH));
     }
 }
