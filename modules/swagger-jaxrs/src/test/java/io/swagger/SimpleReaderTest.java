@@ -682,7 +682,7 @@ public class SimpleReaderTest {
         Parameter readOnlyParam = swagger.getPath("/fun/readOnly").getGet().getParameters().get(0);
         assertTrue(readOnlyParam.isReadOnly());
 
-        Parameter allowEmptyParam = swagger.getPath("/fun/allowEmpty").getGet().getParameters().get(0);
+        QueryParameter allowEmptyParam = (QueryParameter) swagger.getPath("/fun/allowEmpty").getGet().getParameters().get(0);
         assertTrue(allowEmptyParam.getAllowEmptyValue());
     }
 }
